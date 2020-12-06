@@ -7,8 +7,7 @@ public class AddGifts_Script : MonoBehaviour
     GameObject[] points;
     int randomNumberPonts;
 
-    public GameObject[] gift;
-    int randomNumberGift;
+    public GameObject gift;
 
     private void Start()
     {
@@ -19,8 +18,7 @@ public class AddGifts_Script : MonoBehaviour
     public void AddGift()
     {
         randomNumberPonts = Random.Range(0, points.Length);
-        randomNumberGift = Random.Range(0, gift.Length);
-        Instantiate(gift[randomNumberGift]);
-        gift[randomNumberGift].transform.position = points[randomNumberPonts].transform.position;
+        Instantiate(gift);
+        gift.transform.position = points[randomNumberPonts].transform.position;
     }
 }

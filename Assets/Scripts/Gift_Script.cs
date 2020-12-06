@@ -4,8 +4,24 @@ using UnityEngine;
 
 public class Gift_Script : MonoBehaviour
 {
+    public GameObject psGift;
+
     GameObject point_Gifts;
     GameObject score;
+
+    public Sprite[] sprites;
+    SpriteRenderer spriteRenderer;
+    int randomSprite;
+
+    BoxCollider2D boxCollider2D;
+
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        randomSprite = Random.Range(0, sprites.Length);
+        spriteRenderer.sprite = sprites[randomSprite];
+        boxCollider2D = GetComponent<BoxCollider2D>();
+    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -15,7 +31,15 @@ public class Gift_Script : MonoBehaviour
 
             score = GameObject.FindGameObjectWithTag("ManagerScene");
             score.GetComponent<Score_Script>().NewScore();
-            Destroy(gameObject);
+
+            boxCollider2D.enabled = false;
+            spriteRenderer.enabled = false;
+            Instantiate(psGift,gameObject.transform);
+
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            player.GetComponent<Rigidbody2D>().mass += 0.1f;
+
+            Destroy(gameObject,10f);
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ManagerMenu_Script : MonoBehaviour
 {
-    int currentScene;
+    public int currentScene;
     GameObject panelMenuGame;
     bool isPause;
 
