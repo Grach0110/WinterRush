@@ -14,6 +14,7 @@ public class PlayerController_Script : MonoBehaviour
     private void Start()
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
+
         rigidBody2D.gravityScale = 0.1f;
         gameObject.transform.position = new Vector3(0.5f, -1f, 0f);
     }
@@ -36,11 +37,11 @@ public class PlayerController_Script : MonoBehaviour
         {
             MoveUp();
         }
+
         if (_moveHorizontal)
         {
             MoveHor();
         }
-        
     }
 
     public void MoveUp()

@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Портал
-/// </summary>
 public class Portal_Script : MonoBehaviour
 {
     /// <summary>

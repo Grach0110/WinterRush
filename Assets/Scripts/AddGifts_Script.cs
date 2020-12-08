@@ -4,9 +4,18 @@ using UnityEngine;
 
 public class AddGifts_Script : MonoBehaviour
 {
+    /// <summary>
+    /// Точки появления подарков
+    /// </summary>
     GameObject[] points;
+    /// <summary>
+    /// Случайное появление
+    /// </summary>
     int randomNumberPonts;
 
+    /// <summary>
+    /// Префаб подарка
+    /// </summary>
     public GameObject gift;
 
     private void Start()

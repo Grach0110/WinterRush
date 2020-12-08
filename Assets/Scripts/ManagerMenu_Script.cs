@@ -6,11 +6,23 @@ using UnityEngine.UI;
 
 public class ManagerMenu_Script : MonoBehaviour
 {
+    /// <summary>
+    /// Текущая сцена
+    /// </summary>
     public int currentScene;
+    /// <summary>
+    /// Панель главного меню
+    /// </summary>
     GameObject panelMenuGame;
+    /// <summary>
+    /// Пауза
+    /// </summary>
     bool isPause;
 
-    GameObject scoreGameOVerText;
+    /// <summary>
+    /// Количество очков к концу игры \ text
+    /// </summary>
+    GameObject scoreGameOverText;
 
     private void Awake()
     {
@@ -25,7 +37,6 @@ public class ManagerMenu_Script : MonoBehaviour
         {
             panelMenuGame = null;
         }
-        
     }
 
     private void Update()
@@ -77,7 +88,7 @@ public class ManagerMenu_Script : MonoBehaviour
     {
         Time.timeScale = 0f;
         panelMenuGame.SetActive(true);
-        scoreGameOVerText = GameObject.FindGameObjectWithTag("scoreGameOVerText");
-        scoreGameOVerText.GetComponent<Text>().text = "Ваш счет: " + gameObject.GetComponent<Score_Script>().score;
+        scoreGameOverText = GameObject.FindGameObjectWithTag("scoreGameOVerText");
+        scoreGameOverText.GetComponent<Text>().text = "Ваш счет: " + gameObject.GetComponent<Score_Script>().score;
     }
 }

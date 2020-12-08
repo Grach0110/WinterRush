@@ -5,6 +5,9 @@ using UnityEngine.UI;
 public class Score_Script : MonoBehaviour
 {
     public Text scoreText;
+    /// <summary>
+    /// количество очков
+    /// </summary>
     public int score = 0;
 
     private void Start()

@@ -9,6 +9,8 @@ TagManager:
   - ManagerScene
   - panelMenuGame
   - scoreGameOVerText
+  - Gift
+  - Enemy
   layers:
   - Default
   - TransparentFX

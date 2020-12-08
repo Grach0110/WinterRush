@@ -5,12 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class PlayList_Script : MonoBehaviour
 {
+    /// <summary>
+    /// Музыка для главного меню
+    /// </summary>
     public AudioClip mainMenuClip;
+    /// <summary>
+    /// Вся музыка - игровая сцена
+    /// </summary>
     public AudioClip[] music;
     AudioSource audioSource;
 
+    /// <summary>
+    /// Игрок врезался 
+    /// </summary>
+    public bool playerDead;
+
     public void Start()
     {
+        playerDead = false;
+
         audioSource = GetComponent<AudioSource>();
         audioSource.loop = false;
 
@@ -25,7 +38,7 @@ public class PlayList_Script : MonoBehaviour
     {
         if (GetComponent<ManagerMenu_Script>().currentScene > 0)
         {
-            if (!audioSource.isPlaying)
+            if (!audioSource.isPlaying || playerDead)
             {
                 audioSource.clip = GetRandomClip();
                 audioSource.Play();
