@@ -20,8 +20,7 @@ public class AddGifts_Script : MonoBehaviour
 
     private void Start()
     {
-        points = GameObject.FindGameObjectsWithTag("PointGift");
-        AddGift();
+        points = GameObject.FindGameObjectsWithTag("PointGift");       
     }
 
     public void AddGift()

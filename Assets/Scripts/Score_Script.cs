@@ -12,8 +12,12 @@ public class Score_Script : MonoBehaviour
 
     private void Start()
     {
-        scoreText.GetComponent<Text>();
-        scoreText.text = "Счет: " + score.ToString();
+        if (GetComponent<ManagerMenu_Script>().currentScene > 0)
+        {
+            scoreText.GetComponent<Text>();
+            scoreText.text = "Счет: " + score.ToString();
+        }
+       
     }
 
     public void NewScore()

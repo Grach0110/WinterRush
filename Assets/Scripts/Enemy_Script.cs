@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class Enemy_Script : MonoBehaviour
 {
+    /// <summary>
+    /// Позиция цели
+    /// </summary>
     GameObject targetPos;
+    /// <summary>
+    /// Скорость
+    /// </summary>
     public float speed;
 
     private void Update()

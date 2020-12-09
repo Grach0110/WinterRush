@@ -7,6 +7,16 @@ using UnityEngine.UI;
 public class ManagerMenu_Script : MonoBehaviour
 {
     /// <summary>
+    /// Снежинки
+    /// </summary>
+    public GameObject snowflakes;
+    /// <summary>
+    /// Время до появление снежинки
+    /// </summary>
+    public float timeRespawnSnowflakes;
+    float timer;
+
+    /// <summary>
     /// Текущая сцена
     /// </summary>
     public int currentScene;
@@ -27,15 +37,26 @@ public class ManagerMenu_Script : MonoBehaviour
     private void Awake()
     {
         currentScene = SceneManager.GetActiveScene().buildIndex;
+    }
+
+    private void Start()
+    {
         isPause = false;
-        if (currentScene > 0)
+
+        if (currentScene == 0)
         {
-            panelMenuGame = GameObject.FindGameObjectWithTag("panelMenuGame");
-            panelMenuGame.SetActive(false);
+            panelMenuGame = null;
+            GetComponent<BG_Script>().SceneMenu();
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
         }
         else
         {
-            panelMenuGame = null;
+            panelMenuGame = GameObject.FindGameObjectWithTag("panelMenuGame");
+            panelMenuGame.SetActive(false);
+
+            GetComponent<BG_Script>().SceneGame();
+            GetComponent<AddGifts_Script>().AddGift();
+            gameObject.transform.localScale = new Vector3(2f, 2f, 1f);
         }
     }
 
@@ -55,6 +76,13 @@ public class ManagerMenu_Script : MonoBehaviour
                     isPause = true;
                     Pause();
                 }
+            }
+
+            timer -= Time.deltaTime;
+            if (timer < 0)
+            {
+                Instantiate(snowflakes,transform);
+                timer = timeRespawnSnowflakes;
             }
         }
     }

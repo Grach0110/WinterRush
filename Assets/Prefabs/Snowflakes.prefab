@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4284486604583675319
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4284486604583675315}
+  - component: {fileID: 4284486604583675314}
+  - component: {fileID: 4284486604583675313}
+  - component: {fileID: 4284486604583675312}
+  m_Layer: 0
+  m_Name: Snowflakes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4284486604583675315
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284486604583675319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20, y: 16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &4284486604583675314
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284486604583675319}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 167
+  m_Sprite: {fileID: 2021620474428304106, guid: 47ff9cb11c5704103b7e2c606c02ac77,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.25, y: 0.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!50 &4284486604583675313
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284486604583675319}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0.1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &4284486604583675312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4284486604583675319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec6a998120894f20b40e71705291271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowflakes:
+  - {fileID: 2021620474428304106, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 1324504203649454427, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 4931223175092893262, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 5353778834122415436, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -4009026785705858296, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -6864248513031039731, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -4931493425462768626, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 4634413148391270060, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -8494275665759193537, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 4825235727259413546, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -173111689142973446, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -8119238562826442274, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 7647220239029180754, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -3161244041262638922, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: 6795794440774103104, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  - {fileID: -6853369361812857019, guid: 47ff9cb11c5704103b7e2c606c02ac77, type: 3}
+  lifeTime: 10
