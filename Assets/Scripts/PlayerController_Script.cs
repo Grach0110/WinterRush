@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController_Script : MonoBehaviour
 {
+    SpriteRenderer spriteRenderer;
+    Animator animator;
     private Rigidbody2D rigidBody2D;
     private float strike = 2f;
     private bool moveUp = false;
@@ -13,6 +15,8 @@ public class PlayerController_Script : MonoBehaviour
 
     private void Start()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         rigidBody2D = GetComponent<Rigidbody2D>();
 
         rigidBody2D.gravityScale = 0.1f;
@@ -33,6 +37,15 @@ public class PlayerController_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (rigidBody2D.velocity.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else
+        {
+            spriteRenderer.flipX = false;
+        }
+
         if (moveUp)
         {
             MoveUp();
@@ -47,6 +60,7 @@ public class PlayerController_Script : MonoBehaviour
     public void MoveUp()
     {
         rigidBody2D.AddForce(new Vector2(0, strike), ForceMode2D.Impulse);
+        animator.SetTrigger("_Walk");
         moveUp = false;
     }
 
@@ -54,6 +68,7 @@ public class PlayerController_Script : MonoBehaviour
     {
         moveHorizontal = Input.GetAxis("Horizontal") * 10;
         rigidBody2D.AddForce(new Vector2(moveHorizontal, 1f), ForceMode2D.Impulse);
+        animator.SetTrigger("_Walk");
         _moveHorizontal = false;
     }
 }
