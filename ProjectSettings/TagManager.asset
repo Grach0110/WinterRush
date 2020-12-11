@@ -11,6 +11,7 @@ TagManager:
   - scoreGameOVerText
   - Gift
   - Enemy
+  - ScoreGame
   layers:
   - Default
   - TransparentFX

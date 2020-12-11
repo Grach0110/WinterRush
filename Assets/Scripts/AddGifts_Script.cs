@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AddGifts_Script : MonoBehaviour
 {
@@ -18,11 +16,17 @@ public class AddGifts_Script : MonoBehaviour
     /// </summary>
     public GameObject gift;
 
-    private void Start()
+    /// <summary>
+    /// Поиск всех точек
+    /// </summary>
+    public void Points()
     {
-        points = GameObject.FindGameObjectsWithTag("PointGift");       
+        points = GameObject.FindGameObjectsWithTag("PointGift");
     }
 
+    /// <summary>
+    /// Появление поарка
+    /// </summary>
     public void AddGift()
     {
         randomNumberPonts = Random.Range(0, points.Length);

@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2363323404150434633}
   - component: {fileID: 2363323404150434629}
+  - component: {fileID: 2363323404150434627}
   - component: {fileID: 2363323404150434632}
   - component: {fileID: 2363323404150434630}
   - component: {fileID: 2363323404150434631}
   - component: {fileID: 2363323404150434628}
-  - component: {fileID: 2363323404150434627}
   - component: {fileID: 2363323404150434626}
   m_Layer: 0
   m_Name: ManagerScenePrefab
@@ -48,7 +48,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -133,64 +133,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2363323404150434632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363323404150434635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 676579403c959e1418f1f7d999f10798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  score: 0
---- !u!114 &2363323404150434630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363323404150434635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f1bbfc71eb532241a9a5a65125a029e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gift: {fileID: 5740904980855142015, guid: 1e9c87b61c74fdc49ac1474bc8724830, type: 3}
---- !u!114 &2363323404150434631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363323404150434635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce3bce3925666949a10a74293816b44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentScene: 0
---- !u!114 &2363323404150434628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2363323404150434635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6acc83bae4c0c4b6f9b5748e97dce2b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenuClip: {fileID: 8300000, guid: 86893e357aa754238a0583d2b6f07cff, type: 3}
-  music:
-  - {fileID: 8300000, guid: a2057f34f3be24c1fb4f442cca1eb97a, type: 3}
-  - {fileID: 8300000, guid: 9edc3f29916494fa291dfb9021b38d49, type: 3}
-  - {fileID: 8300000, guid: 4127e5e3e97e0492e86467f6b30e7752, type: 3}
-  playerDead: 0
 --- !u!212 &2363323404150434627
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -241,6 +183,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2363323404150434632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363323404150434635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676579403c959e1418f1f7d999f10798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  score: 0
+--- !u!114 &2363323404150434630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363323404150434635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1bbfc71eb532241a9a5a65125a029e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gift: {fileID: 5740904980855142015, guid: 1e9c87b61c74fdc49ac1474bc8724830, type: 3}
+--- !u!114 &2363323404150434631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363323404150434635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce3bce3925666949a10a74293816b44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowflakes: {fileID: 4284486604583675319, guid: 90b0864f7f0a044c9b2d1a2ed4050cb6,
+    type: 3}
+  timeRespawnSnowflakes: 0.5
+  currentScene: 0
+--- !u!114 &2363323404150434628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363323404150434635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6acc83bae4c0c4b6f9b5748e97dce2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuClip: {fileID: 8300000, guid: 86893e357aa754238a0583d2b6f07cff, type: 3}
+  music:
+  - {fileID: 8300000, guid: a2057f34f3be24c1fb4f442cca1eb97a, type: 3}
+  - {fileID: 8300000, guid: 9edc3f29916494fa291dfb9021b38d49, type: 3}
+  - {fileID: 8300000, guid: 4127e5e3e97e0492e86467f6b30e7752, type: 3}
+  playerDead: 0
 --- !u!114 &2363323404150434626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteMainMenu: {fileID: 21300000, guid: 01ee0f979e8fdf842a86fc541c1beca9, type: 3}
-  sprites:
+  spritesGame:
   - {fileID: 21300000, guid: 672e2780d25fa4a69a1d32a1ae7fc2be, type: 3}
   - {fileID: 21300000, guid: cd5f6e45f6b58354f9fe6f95ca4ee866, type: 3}

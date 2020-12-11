@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy_Script : MonoBehaviour
 {
@@ -19,10 +17,15 @@ public class Enemy_Script : MonoBehaviour
         {
             NewTarget();
         }
-
-        transform.position = Vector3.MoveTowards(transform.position, targetPos.transform.position, speed * Time.deltaTime);
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPos.transform.position, speed * Time.deltaTime);
+        }
     }
 
+    /// <summary>
+    /// Новая цель
+    /// </summary>
     void NewTarget()
     {
         targetPos = GameObject.FindGameObjectWithTag("Gift");

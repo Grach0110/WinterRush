@@ -1,28 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 public class Score_Script : MonoBehaviour
 {
-    public Text scoreText;
+    public GameObject scoreText;
     /// <summary>
     /// количество очков
     /// </summary>
     public int score = 0;
 
-    private void Start()
+    public void StartScore()
     {
-        if (GetComponent<ManagerMenu_Script>().currentScene > 0)
-        {
-            scoreText.GetComponent<Text>();
-            scoreText.text = "Счет: " + score.ToString();
-        }
-       
+        scoreText = GameObject.FindGameObjectWithTag("ScoreGame");
+        scoreText.GetComponent<Text>().text = "Счет: " + score.ToString();
     }
 
     public void NewScore()
     {
         score++;
-        scoreText.text = "Счет: " + score.ToString();
+        scoreText.GetComponent<Text>().text = "Счет: " + score.ToString();
     }
 }

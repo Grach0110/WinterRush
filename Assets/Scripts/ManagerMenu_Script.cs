@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -55,6 +53,10 @@ public class ManagerMenu_Script : MonoBehaviour
             panelMenuGame.SetActive(false);
 
             GetComponent<BG_Script>().SceneGame();
+
+            GetComponent<Score_Script>().StartScore();
+
+            GetComponent<AddGifts_Script>().Points();
             GetComponent<AddGifts_Script>().AddGift();
             gameObject.transform.localScale = new Vector3(2f, 2f, 1f);
         }
