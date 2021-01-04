@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5740904980855142015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5, y: -5.75, z: 0}
+  m_LocalPosition: {x: 13.5, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -123,9 +123,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   psGift: {fileID: 1462663004537007081, guid: c527b0e43311e41748f9504b35f239ed, type: 3}
   sprites:
-  - {fileID: 1533909394052034002, guid: 8c893216890a74cf48ba55b1bd0a853b, type: 3}
-  - {fileID: 4398399578313179397, guid: 8c893216890a74cf48ba55b1bd0a853b, type: 3}
-  - {fileID: -6042871209615967158, guid: 8c893216890a74cf48ba55b1bd0a853b, type: 3}
-  - {fileID: -4603214018109331639, guid: 8c893216890a74cf48ba55b1bd0a853b, type: 3}
-  - {fileID: 3170545825376349607, guid: 8c893216890a74cf48ba55b1bd0a853b, type: 3}
-  - {fileID: 4989842697912517705, guid: 8c893216890a74cf48ba55b1bd0a853b, type: 3}
+  - {fileID: -7454696453560411905, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: -7564484972473655, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: -2875604491745368518, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: -2291434384601843558, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: 6113866740014524301, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: -8841571334215367600, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: -8668545554272724226, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: 5706751143937258274, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
+  - {fileID: 7593772372445018247, guid: 51e995de1dd3d4c4b8893aa1b71e0187, type: 3}
